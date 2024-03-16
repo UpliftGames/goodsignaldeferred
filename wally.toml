@@ -1,7 +1,7 @@
 [package]
 name = "upliftgames/goodsignaldeferred"
 description = "A fast Signal class implementation that has full feature parity with Roblox' RBXScriptSignal. Modified to use deferred signal behavior instead of immediate mode."
-version = "0.3.0"
+version = "0.3.1"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-internal-index"
 realm = "shared"
