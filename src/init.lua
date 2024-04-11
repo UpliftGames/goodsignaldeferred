@@ -24,7 +24,7 @@ export type Connection = {
 
 export type Signal<T...> = {
 	Fire: (self: Signal<T...>, T...) -> (),
-	FireDeferred: (self: Signal<T...>, T...) -> (),
+	FireImmediate: (self: Signal<T...>, T...) -> (),
 	Connect: (self: Signal<T...>, fn: (T...) -> ()) -> Connection,
 	Once: (self: Signal<T...>, fn: (T...) -> ()) -> Connection,
 	DisconnectAll: (self: Signal<T...>) -> (),
@@ -342,7 +342,7 @@ end
 
 	Same as `FireImmediate`, but uses `task.defer` internally & doesn't take advantage of thread reuse.
 	```lua
-	signal:FireDeferred("Hello")
+	signal:Fire("Hello")
 	```
 ]=]
 function Signal:Fire(...)
